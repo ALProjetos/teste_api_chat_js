@@ -19,12 +19,8 @@ COPY . .
 # Compila o código TypeScript
 RUN npm run build
 
-# Defina a variável de ambiente para o Node.js
-ENV NODE_ENV=production
-
 # Expõe a porta em que a aplicação será executada
-EXPOSE 3005
+EXPOSE 3000
 
 # Comando para iniciar a aplicação
 CMD [ "npm", "start" ]
-#CMD ["node", "src/index.ts"]
