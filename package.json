@@ -5,6 +5,10 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
+    "prestart": "chmod +x node_modules/.bin/ts-node",
+    "build": "tsc",
+    "start": "ts-node src/index.js",
+    "dev": "npx ts-node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,9 +23,13 @@
   },
   "homepage": "https://github.com/ALProjetos/teste_api_chat_js#readme",
   "dependencies": {
-    "nodemon": "^3.1.3",
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
+    "nodemon": "^3.1.3",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17"
   }
 }
